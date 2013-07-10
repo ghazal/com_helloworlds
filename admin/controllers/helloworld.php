@@ -19,6 +19,11 @@ jimport('joomla.application.component.controllerform');
  */
 class HelloworldsControllerhelloworld extends JControllerForm
 {
+	public function __construct($config = array())
+	{
+		$this->view_list = 'helloworlds'; // just incase the singular is not exactly plural, set the return view listing to the main view.
+		parent::__construct($config);
+	}
 
 }
 ?>

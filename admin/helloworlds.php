@@ -12,14 +12,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 // Added for Joomla 3.0
-if(!defined('DS')):
+if(!defined('DS')){
 	define('DS',DIRECTORY_SEPARATOR);
-endif;
+};
 
 // Access check.
-if (!JFactory::getUser()->authorise('core.manage', 'com_helloworlds')):
+if (!JFactory::getUser()->authorise('core.manage', 'com_helloworlds')){
 	return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
-endif;
+};
 
 // Load cms libraries
 JLoader::registerPrefix('J', JPATH_PLATFORM . '/cms');

@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 
 $edit = "index.php?option=com_helloworlds&view=helloworlds&task=helloworld.edit";
 ?>
-<?php foreach($this->items as $i => $item): ?>
+<?php foreach($this->items as $i => $item){ ?>
 	<tr class="row<?php echo $i % 2; ?>">
 		<td>
 			<?php echo $item->id; ?>
@@ -24,8 +24,5 @@ $edit = "index.php?option=com_helloworlds&view=helloworlds&task=helloworld.edit"
 		<td>
 			<?php echo $item->title; ?> - (<a href="<?php echo $edit; ?>&id=<?php echo $item->id; ?>"><?php echo 'Edit'; ?></a>)
 		</td>
-		<td>
-			<?php echo $item->published; ?>
-		</td>
 	</tr>
-<?php endforeach; ?>
+<?php }; ?>

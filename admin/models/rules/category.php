@@ -1,6 +1,6 @@
 <?php
 /*------------------------------------------------------------------------
-# default_head.php - Hello World Component
+# category.php - Hello World Component
 # ------------------------------------------------------------------------
 # author    Caleb Nance
 # copyright Copyright (C) 2013. All Rights Reserved
@@ -11,15 +11,20 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+// import Joomla formrule library
+jimport('joomla.form.formrule');
+/**
+ * Form Rule class for the Joomla Framework.
+ */
+class JFormRulecategory extends JFormRule
+{
+	/**
+	 * The regular expression.
+	 *
+	 * @access	protected
+	 * @var		string
+	 * @since	2.5
+	 */
+	protected $regex = '^[^_]+$';
+}
 ?>
-<tr>
-	<th width="5">
-		<?php echo JText::_('ID'); ?>
-	</th>
-	<th width="20">
-		<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count($this->items); ?>);" />
-	</th>
-	<th>
-		<?php echo JText::_('Title'); ?>
-	</th>
-</tr>

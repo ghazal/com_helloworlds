@@ -15,7 +15,17 @@ window.addEvent('domready', function() {
 			regex=/^[^_]+$/;
 			return regex.test(value);
 	});
-	document.formvalidator.setHandler('selectcategory',
+	document.formvalidator.setHandler('category',
+		function (value) {
+			regex=/^[^_]+$/;
+			return regex.test(value);
+	});
+	document.formvalidator.setHandler('description',
+		function (value) {
+			regex=/^[^_]+$/;
+			return regex.test(value);
+	});
+	document.formvalidator.setHandler('published',
 		function (value) {
 			regex=/^[^_]+$/;
 			return regex.test(value);

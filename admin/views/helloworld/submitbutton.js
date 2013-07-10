@@ -11,33 +11,24 @@
  */
 Joomla.submitbutton = function(task)
 {
-	if (task == '')
-	{
+	if (task == ''){
 		return false;
-	}
-	else
-	{
+	} else { 
 		var isValid=true;
 		var action = task.split('.');
-		if (action[1] != 'cancel' && action[1] != 'close')
-		{
+		if (action[1] != 'cancel' && action[1] != 'close'){
 			var forms = $$('form.form-validate');
-			for (var i=0;i<forms.length;i++)
-			{
-				if (!document.formvalidator.isValid(forms[i]))
-				{
+			for (var i=0;i<forms.length;i++){
+				if (!document.formvalidator.isValid(forms[i])){
 					isValid = false;
 					break;
 				}
 			}
 		}
-		if (isValid)
-		{
+		if (isValid){
 			Joomla.submitform(task);
 			return true;
-		}
-		else
-		{
+		} else {
 			alert(Joomla.JText._('helloworld, some values are not acceptable.','Some values are unacceptable'));
 			return false;
 		}

@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 
 ?><div id="helloworlds-content">
 	<p><strong>Title</strong>: <?php echo $this->item->title; ?></p>
-	<p><strong>Select Category</strong>: <?php echo $this->item->selectcategory; ?></p>
+	<p><strong>Category</strong>: <?php echo $this->item->category; ?></p>
 	<p><strong>Description</strong>: <?php echo $this->item->description; ?></p>
 	<p><strong>Published</strong>: <?php echo $this->item->published; ?></p>
 </div>

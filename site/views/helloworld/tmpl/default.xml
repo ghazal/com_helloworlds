@@ -11,7 +11,7 @@
 			<field
 				name="id"
 				required="true"
-				type="helloworlds0"
+				type="helloworldszero"
 				label="COM_HELLOWORLDS_HELLOWORLD_FIELD_TITLE_LABEL"
 				description="COM_HELLOWORLDS_HELLOWORLD_FIELD_TITLE_DESC"
 			/>

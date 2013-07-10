@@ -18,14 +18,14 @@ JHtml::_('dropdown.init');
 JHtml::_('formbehavior.chosen', 'select');
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_helloworlds&view=helloworlds'); ?>" method="post" name="adminForm" id="adminForm">
-<?php if(!empty( $this->sidebar)): ?>
+<?php if(!empty( $this->sidebar)){ ?>
 	<div id="j-sidebar-container" class="span2">
 		<?php echo $this->sidebar; ?>
 	</div>
 	<div id="j-main-container" class="span10">
-<?php else : ?>
+<?php } else { ?>
 	<div id="j-main-container">
-<?php endif;?>
+<?php }; ?>
 		<table class="table table-striped">
 			<thead><?php echo $this->loadTemplate('head');?></thead>
 			<tfoot><?php echo $this->loadTemplate('foot');?></tfoot>

@@ -28,10 +28,10 @@ $params = $this->form->getFieldsets('params');
 			<fieldset class="adminform">
 				<legend><?php echo JText::_( 'Details' ); ?></legend>
 				<div class="adminformlist">
-					<?php foreach($this->form->getFieldset('details') as $field): ?>
+					<?php foreach($this->form->getFieldset('details') as $field){ ?>
 						<div><?php echo $field->label; echo $field->input;?></div>
 						<div class="clr"></div>
-					<?php endforeach; ?>
+					<?php }; ?>
 				</div>
 			</fieldset>
 		</div>

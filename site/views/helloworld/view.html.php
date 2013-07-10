@@ -25,13 +25,13 @@ class HelloworldsViewhelloworld extends JViewLegacy
 		// Assign data to the view
 		$this->item = $this->get('Item');
 		$db = JFactory::getDBO();
-		$this->item->selectcategory = $db->setQuery('SELECT #__categories.title FROM #__categories WHERE #__categories.id = "'.$this->item->selectcategory.'"')->loadResult();
+		$this->item->category = $db->setQuery('SELECT #__categories.title FROM #__categories WHERE #__categories.id = "'.$this->item->category.'"')->loadResult();
 
 		// Check for errors.
-		if (count($errors = $this->get('Errors'))):
+		if (count($errors = $this->get('Errors'))){
 			JError::raiseError(500, implode('<br />', $errors));
 			return false;
-		endif;
+		};
 
 		// Display the view
 		parent::display($tpl);

@@ -61,9 +61,9 @@ class HelloworldsModelhelloworld extends JModelAdmin
 		// Get the form.
 		$form = $this->loadForm('com_helloworlds.helloworld', 'helloworld', array('control' => 'jform', 'load_data' => $loadData));
 
-		if (empty($form)):
+		if (empty($form)){
 			return false;
-		endif;
+		};
 
 		return $form;
 	}
@@ -89,9 +89,9 @@ class HelloworldsModelhelloworld extends JModelAdmin
 		// Check the session for previously entered form data.
 		$data = JFactory::getApplication()->getUserState('com_helloworlds.edit.helloworld.data', array());
 
-		if (empty($data)):
+		if (empty($data)){
 			$data = $this->getItem();
-		endif;
+		};
 
 	return $data;
 	}

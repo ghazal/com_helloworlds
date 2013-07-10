@@ -22,28 +22,32 @@
 		<field
 			default=""
 			description=""
-			label="Select Category"
-			name="selectcategory"
+			label="Category"
+			name="category"
 			required="true"
 			extension="com_helloworlds"
 			type="category"
-			validate="selectcategory"
+			validate="category"
 		/>
 		<field
 			default=""
 			description=""
 			label="Description"
 			name="description"
+			required="true"
 			filter="safehtml"
 			width="300"
 			type="editor"
+			validate="description"
 		/>
 		<field
 			default="yes"
 			description=""
 			label="Published"
 			name="published"
+			required="true"
 			type="radio"
+			validate="published"
 		>
 			<option
 				value="no">No</option>

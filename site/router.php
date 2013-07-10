@@ -15,15 +15,15 @@ function HelloworldsBuildRoute(&$query)
 {
 	$segments = array();
 
-	if(isset($query['view'])):
+	if(isset($query['view'])){
 		$segments[] = $query['view'];
 		unset($query['view']);
-	endif;
+	};
 
-	if(isset($query['id'])):
+	if(isset($query['id'])){
 		$segments[] = $query['id'];
 		unset($query['id']);
-	endif;
+	};
 
 	return $segments;
 }

@@ -1,6 +1,6 @@
 <?php
 /*------------------------------------------------------------------------
-# selectcategory.php - Hello World Component
+# published.php - Hello World Component
 # ------------------------------------------------------------------------
 # author    Caleb Nance
 # copyright Copyright (C) 2013. All Rights Reserved
@@ -16,7 +16,7 @@ jimport('joomla.form.formrule');
 /**
  * Form Rule class for the Joomla Framework.
  */
-class JFormRuleselectcategory extends JFormRule
+class JFormRulepublished extends JFormRule
 {
 	/**
 	 * The regular expression.

@@ -31,10 +31,10 @@ class HelloworldsViewhelloworld extends JViewLegacy
 		$script = $this->get('Script');
 
 		// Check for errors.
-		if (count($errors = $this->get('Errors'))):
+		if (count($errors = $this->get('Errors'))){
 			JError::raiseError(500, implode('<br />', $errors));
 			return false;
-		endif;
+		};
 
 		// Assign the variables
 		$this->form = $form;
@@ -64,30 +64,30 @@ class HelloworldsViewhelloworld extends JViewLegacy
 		$canDo = HelloworldsHelper::getActions($this->item->id);
 		JToolBarHelper::title($isNew ? JText::_('Helloworld :: New') : JText::_('Helloworld :: Edit'), 'helloworld');
 		// Built the actions for new and existing records.
-		if ($isNew):
+		if ($isNew){
 			// For new records, check the create permission.
-			if ($canDo->get('core.create')):
+			if ($canDo->get('core.create')){
 				JToolBarHelper::apply('helloworld.apply', 'JTOOLBAR_APPLY');
 				JToolBarHelper::save('helloworld.save', 'JTOOLBAR_SAVE');
 				JToolBarHelper::custom('helloworld.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
-			endif;
+			};
 			JToolBarHelper::cancel('helloworld.cancel', 'JTOOLBAR_CANCEL');
-		else:
-			if ($canDo->get('core.edit')):
+		} else {
+			if ($canDo->get('core.edit')){
 				// We can save the new record
 				JToolBarHelper::apply('helloworld.apply', 'JTOOLBAR_APPLY');
 				JToolBarHelper::save('helloworld.save', 'JTOOLBAR_SAVE');
 				// We can save this record, but check the create permission to see
 				// if we can return to make a new one.
-				if ($canDo->get('core.create')):
+				if ($canDo->get('core.create')){
 					JToolBarHelper::custom('helloworld.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
-				endif;
-			endif;
-			if ($canDo->get('core.create')):
+				};
+			};
+			if ($canDo->get('core.create')){
 				JToolBarHelper::custom('helloworld.save2copy', 'save-copy.png', 'save-copy_f2.png', 'JTOOLBAR_SAVE_AS_COPY', false);
-			endif;
+			};
 			JToolBarHelper::cancel('helloworld.cancel', 'JTOOLBAR_CLOSE');
-		endif;
+		};
 	}
 
 	/**

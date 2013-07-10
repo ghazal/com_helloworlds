@@ -12,9 +12,9 @@
 defined('_JEXEC') or die('Restricted access');
 
 // Added for Joomla 3.0
-if(!defined('DS')):
+if(!defined('DS')){
 	define('DS',DIRECTORY_SEPARATOR);
-endif;
+};
 
 // Set the component css/js
 $document = JFactory::getDocument();

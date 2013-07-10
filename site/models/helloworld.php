@@ -74,8 +74,7 @@ class HelloworldsModelhelloworld extends JModelItem
 				if ($e->getCode() == 404) {
 					// Need to go thru the error handler to allow Redirect to work.
 					JError::raiseError(404, $e->getMessage());
-				}
-				else {
+				} else {
 					$this->setError($e);
 					$this->_item[$pk] = false;
 				}

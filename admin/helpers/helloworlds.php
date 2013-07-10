@@ -26,9 +26,9 @@ abstract class HelloworldsHelper
 
 		// set some global property
 		$document = JFactory::getDocument();
-		if ($submenu == 'categories'):
+		if ($submenu == 'categories'){
 			$document->setTitle(JText::_('Categories - Helloworlds'));
-		endif;
+		};
 	}
 
 	/**
@@ -41,17 +41,17 @@ abstract class HelloworldsHelper
 		$user	= JFactory::getUser();
 		$result	= new JObject;
 
-		if (empty($Id)):
+		if (empty($Id)){
 			$assetName = 'com_helloworlds';
-		else:
+		} else {
 			$assetName = 'com_helloworlds.message.'.(int) $Id;
-		endif;
+		};
 
 		$actions = JAccess::getActions('com_helloworlds', 'component');
 
-		foreach ($actions as $action):
+		foreach ($actions as $action){
 			$result->set($action->name, $user->authorise($action->name, $assetName));
-		endforeach;
+		};
 
 		return $result;
 	}

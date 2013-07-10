@@ -33,10 +33,10 @@ class HelloworldsViewhelloworlds extends JViewLegacy
 		$pagination = $this->get('Pagination');
 
 		// Check for errors.
-		if (count($errors = $this->get('Errors'))):
+		if (count($errors = $this->get('Errors'))){
 			JError::raiseError(500, implode('<br />', $errors));
 			return false;
-		endif;
+		};
 
 		// Assign data to the view
 		$this->items = $items;
@@ -61,19 +61,19 @@ class HelloworldsViewhelloworlds extends JViewLegacy
 	{
 		$canDo = HelloworldsHelper::getActions();
 		JToolBarHelper::title(JText::_('Helloworlds Manager'), 'helloworlds');
-		if($canDo->get('core.create')):
+		if($canDo->get('core.create')){
 			JToolBarHelper::addNew('helloworld.add', 'JTOOLBAR_NEW');
-		endif;
-		if($canDo->get('core.edit')):
+		};
+		if($canDo->get('core.edit')){
 			JToolBarHelper::editList('helloworld.edit', 'JTOOLBAR_EDIT');
-		endif;
-		if($canDo->get('core.delete')):
+		};
+		if($canDo->get('core.delete')){
 			JToolBarHelper::deleteList('', 'helloworlds.delete', 'JTOOLBAR_DELETE');
-		endif;
-		if($canDo->get('core.admin')):
+		};
+		if($canDo->get('core.admin')){
 			JToolBarHelper::divider();
 			JToolBarHelper::preferences('com_helloworlds');
-		endif;
+		};
 	}
 
 	/**
